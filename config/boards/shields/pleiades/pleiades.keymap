@@ -13,12 +13,6 @@
 //  ----------keycodes---------- Works
 #define MEH   LC(LS(LALT))
 
-#define SFTS   LSHIFT S
-#define SFTE   LSHIFT E
-
-#define KP &kp // replaces &kp with KP
-
-
 #define CTMT(keycode) &mt LCTRL keycode // Control mod tap
 #define HMSF(keycode) &hm LSHIFT keycode // Shift mod tap for homerow
 
@@ -47,7 +41,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "tap-preferred"; 
             bindings = <&kp>, <&kp>;
         };
     };
@@ -89,17 +83,17 @@
 
         raise_layer {
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------
-// | _______ |    F1   |    F2   |    F3   |    F4   |    F5   |               ---               |    F6   |    F7   |    F8   |    F9   |   F10   |   F11   |
+// |  RESET  |    F1   |    F2   |    F3   |    F4   |    F5   |               ---               |    F6   |    F7   |    F8   |    F9   |   F10   |   F11   |
 // | _______ |   F19   |    F20  | XXXXXXX | XXXXXXX | XXXXXXX |               ---               | XXXXXXX | XXXXXXX |    ^    | XXXXXXX | XXXXXXX |   F12   |
-// | _______ |   WIN   | XXXXXXX |  LCTRL  | XXXXXXX | XXXXXXX |               ---               | XXXXXXX |    <-   |    v    |   ->    | XXXXXXX | COLEMAK |
+// | _______ |   WIN   | XXXXXXX |  SHIFT  |  CTRL   | XXXXXXX |               ---               | XXXXXXX |    <-   |    v    |   ->    | XXXXXXX | COLEMAK |
 // | _______ | XXXXXXX | XXXXXXX | XXXXXXX | XXXXXXX | XXXXXXX |               ---               | XXXXXXX | XXXXXXX | XXXXXXX | XXXXXXX | XXXXXXX | XXXXXXX |
-// | _______ | _______ | _______ | _______ | _______ | _______ | _______ |     ---     | _______ | _______ | [ARROW] | XXXXXXX | XXXXXXX | XXXXXXX | XXXXXXX |
+// | _______ | _______ | _______ | _______ | _______ | _______ | _______ |     ---     | _______ | _______ | [ARROW] | XXXXXXX | XXXXXXX | XXXXXXX |  RESET  |
             bindings = <
-   &trans     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                              &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
+   &reset     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                              &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
    &trans     &kp F19    &kp F20    &none      &none      &none                               &none      &none      &kp UP     &none      &none      &kp F12
-   &trans     &kp LGUI   &none      &kp LCTRL  &none      &kp GRAVE                           &none      &kp LEFT   &kp DOWN   &kp RIGHT  &none      &tog SYM_L
+   &trans     &kp LGUI   &none      &kp LSHIFT &none      &kp GRAVE                           &none      &kp LEFT   &kp DOWN   &kp RIGHT  &none      &tog SYM_L
    &trans     &none      &none      &none      &none      &none                               &none      &none      &none      &none      &none      &none
-   &trans     &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &lt ARW0   &none      &none      &none      &none
+   &trans     &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &lt ARW0   &none      &none      &none      &reset
             >;
         };
     };
