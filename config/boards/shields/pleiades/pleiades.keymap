@@ -1,0 +1,33 @@
+/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+ 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
+
+/ {
+    keymap {
+        compatible =  "zmk,keymap" ;
+
+        default_layer {
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+// | GRAVE   |    1    |    2    |    3    |    4    |    5    |               ---               |    6    |    7    |    8    |    9    |    0    |    -    |
+// | TAB     |    Q    |    W    |    F    |    P    |    B    |               ---               |    J    |    L    |    U    |    Y    |    ;    |    =    |
+// | ESC     |    A    |    R    | S[SHIFT]|    T    |    G    |               ---               |    M    |    N    | E[SHIFT]|    I    |    O    |    '    |
+// | SHIFT   |    Z    |    X    |    C    |    D    |    V    |               ---               |    K    |    H    |    ,    |    .    |    /    |  SHIFT  |
+// | WIN     |   ALT   |   COPY  |  PASTE  |   MEH   |  BKSP   |DEL[CTRL]|     ---     |ENT[CTRL]|  SPACE  | [ARROW] |   HOME  |   END   |  PG_UP  | PG_DOWN |
+            bindings = <
+   &kp GRAVE  &kp N1     &kp N2     &kp N3     &kp N4         &kp N5                                   &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS
+   &kp TAB    &kp Q      &kp W      &kp F      &kp P          &kp B                                    &kp J      &kp L      &kp U      &kp Y      &kp SEMI   &kp EQUAL
+   &kp ESC    &kp A      &kp R      &kp S      &kp T          &kp G                                    &kp M      &kp N      &kp E      &kp I      &kp O      &kp SQT
+   &kp LSHFT  &kp Z      &kp X      &kp C      &kp D          &kp V                                    &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
+   &kp LGUI   &kp LALT   &kp LC(C)  &kp LC(V)  &kp LALT       &kp BSPC   &mt LCTRL DEL   &mt LCTRL RET &kp SPACE  &none      &kp HOME   &kp END    &kp PG_UP  &kp PG_DN  
+            >;
+        };
+    };
+};
