@@ -21,7 +21,7 @@
 
 // example from https://zmk.dev/docs/behaviors/hold-tap #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro C-preprocessor macro
 #define CTMT(keycode) &mt LCTRL keycode // Control mod tap
-#define HMSF(keycode) &hm LSHIFT keycode // HMSF(S) will create a shift homerow mod on the s key
+//#define HMSF(keycode) &hm LSHIFT keycode // HMSF(S) will create a shift homerow mod on the s key
 
 #define ARW0 ARW_L KP_N0
 
@@ -50,9 +50,9 @@
             bindings = <
    &kp GRAVE  &kp N1     &kp N2     &kp N3     &kp N4         &kp N5                                   &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS
    &kp TAB    &kp Q      &kp W      &kp F      &kp P          &kp B                                    &kp J      &kp L      &kp U      &kp Y      &kp SEMI   &kp EQUAL
-   &kp ESC    &kp A      &kp R      HMSF(S)    &kp T          &kp G                                    &kp M      &kp N      HMSF(E)    &kp I      &kp O      &kp SQT
+   &kp ESC    &kp A      &kp R      &kp S      &kp T          &kp G                                    &kp M      &kp N      &kp E      &kp I      &kp O      &kp SQT
    &kp LSHFT  &kp Z      &kp X      &kp C      &kp D          &kp V                                    &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
-   &kp LGUI   &kp LALT   &kp LC(C)  &kp LC(V)  &kp LC(V) &kp BSPC   &mt LCTRL DEL   &mt LCTRL RET &kp SPACE  &mo ARW_L  &kp HOME   &kp END    &kp PG_UP  &kp PG_DN  
+   &kp LGUI   &kp LALT   &kp LC(C)  &kp LC(V)  &kp LC(V)      &kp BSPC   &mt LCTRL DEL   &mt LCTRL RET &kp SPACE  &mo ARW_L  &kp HOME   &kp END    &kp PG_UP  &kp PG_DN  
             >;
         };
         
