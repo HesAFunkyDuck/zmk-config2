@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 //  ----------keycodes---------- not sure if this will work
-#define MEH   LC(LS(LA))
+#define MEH   LC(LS(LALT))
 #define CTDL   LCTRL DEL
 #define CTET   LCTRL RET
 #define SFTS   LSHIFT S
@@ -63,7 +63,7 @@
    &kp TAB    &kp Q      &kp W      &kp F      &kp P          &kp B                                    &kp J      &kp L      &kp U      &kp Y      &kp SEMI   &kp EQUAL
    &kp ESC    &kp A      &kp R      &kp S      &kp T          &kp G                                    &kp M      &kp N      &kp E      &kp I      &kp O      &kp SQT
    &kp LSHFT  &kp Z      &kp X      &kp C      &kp D          &kp V                                    &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
-   &kp LGUI   &kp LALT   &kp LC(C)  &kp LC(V)  &kp LC(LS(LALT))  &kp BSPC   &mt LCTRL DEL   &mt LCTRL RET &kp SPACE  &mo ARW_L  &kp HOME   &kp END    &kp PG_UP  &kp PG_DN  
+   &kp LGUI   &kp LALT   &kp LC(C)  &kp LC(V)  &kp MEH        &kp BSPC   &mt LCTRL DEL   &mt LCTRL RET &kp SPACE  &mo ARW_L  &kp HOME   &kp END    &kp PG_UP  &kp PG_DN  
             >;
         };
         
