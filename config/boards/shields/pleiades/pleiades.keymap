@@ -18,11 +18,10 @@
 
 #define ARW0 ARW_L KP_N0
 #define SYMBS SYM_L BSPC //Tap Backspace - hold Symbol Layer
-//&kp BSPC
 
-//#define VOLU C_VOL_UP
-//#define VOLD C_VOL_DN
-//#define MUTE C_MUTE
+#define VOLU C_VOL_UP
+#define VOLD C_VOL_DN
+#define MUTE C_MUTE
 
 #define PSLS KP_SLASH
 #define PAST KP_MULTIPLY
