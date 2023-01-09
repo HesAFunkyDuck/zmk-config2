@@ -17,6 +17,7 @@
 #define HMSF(keycode) &hm LSHIFT keycode // Shift mod tap for homerow
 
 #define ARW0 ARW_L KP_N0
+#define SYMBS SYM_L &kp BSPC //Tap Backspace - hold Symbol Layer
 
 #define PSLS KP_SLASH
 #define PAST KP_MULTIPLY
@@ -55,13 +56,13 @@
 // | TAB     |    Q    |    W    |    F    |    P    |    B    |               ---               |    J    |    L    |    U    |    Y    |    ;    |    =    |
 // | ESC     |    A    |    R    | S[SHIFT]|    T    |    G    |               ---               |    M    |    N    | E[SHIFT]|    I    |    O    |    '    |
 // | SHIFT   |    Z    |    X    |    C    |    D    |    V    |               ---               |    K    |    H    |    ,    |    .    |    /    |  SHIFT  |
-// | WIN     |   ALT   |   COPY  |  PASTE  |   MEH   |  BKSP   |DEL[CTRL]|     ---     |ENT[CTRL]|  SPACE  | [ARROW] |   HOME  |   END   |  PG_UP  | PG_DOWN |
+// | WIN     |   ALT   |   COPY  |  PASTE  |   MEH   |BKSP[SYM]|DEL[CTRL]|     ---     |ENT[CTRL]|  SPACE  | [ARROW] |   HOME  |   END   |  PG_UP  | PG_DOWN |
             bindings = <
    &kp GRAVE  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                              &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS
    &kp TAB    &kp Q      &kp W      &kp F      &kp P      &kp B                               &kp J      &kp L      &kp U      &kp Y      &kp SEMI   &kp EQUAL
    &kp ESC    &kp A      &kp R      HMSF (S)   &kp T      &kp G                               &kp M      &kp N      HMSF (E)   &kp I      &kp O      &kp SQT
    &kp LSHFT  &kp Z      &kp X      &kp C      &kp D      &kp V                               &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
-   &kp LGUI   &kp LALT   &kp LC(C)  &kp LC(V)  &kp MEH    &kp BSPC   CTMT(DEL)     CTMT(RET)  &kp SPACE  &mo ARW_L  &kp HOME   &kp END    &kp PG_UP  &kp PG_DN  
+   &kp LGUI   &kp LALT   &kp LC(C)  &kp LC(V)  &kp MEH    &lt SYMBS  CTMT(DEL)     CTMT(RET)  &kp SPACE  &mo ARW_L  &kp HOME   &kp END    &kp PG_UP  &kp PG_DN  
             >;
         };
         
@@ -90,8 +91,8 @@
 // | _______ | _______ | _______ | _______ | _______ | _______ | _______ |     ---     | _______ | _______ | [ARROW] | XXXXXXX | XXXXXXX | XXXXXXX |  RESET  |
             bindings = <
    &reset     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                              &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
-   &trans     &kp F19    &kp F20    &none      &none      &none                               &none      &none      &kp UP     &none      &none      &kp F12
-   &trans     &kp LGUI   &none      &kp LSHIFT &none      &kp GRAVE                           &none      &kp LEFT   &kp DOWN   &kp RIGHT  &none      &tog SYM_L
+   &trans     &kp F19    &kp F20    &none      &none      &none                               C_VOL_DN   C_VOL_UP   &kp UP     &none      &none      &kp F12
+   &trans     &kp LGUI   &none      &kp LSHIFT &none      &kp GRAVE                           C_MUTE     &kp LEFT   &kp DOWN   &kp RIGHT  &none      &tog SYM_L
    &trans     &none      &none      &none      &none      &none                               &none      &none      &none      &none      &none      &none
    &trans     &trans     &trans     &trans     &trans     &trans     &trans        &trans     &trans     &lt ARW0   &none      &none      &none      &reset
             >;
