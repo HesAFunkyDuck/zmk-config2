@@ -17,7 +17,7 @@
 #define HMSF(keycode) &hm LSHIFT keycode // Shift mod tap for homerow
 
 #define ARW0 ARW_L KP_N0
-#define SYMBS SYM_L &kp BSPC //Tap Backspace - hold Symbol Layer
+#define SYMBS SYM_L BSPC //Tap Backspace - hold Symbol Layer
 
 #define PSLS KP_SLASH
 #define PAST KP_MULTIPLY
